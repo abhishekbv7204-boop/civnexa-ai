@@ -9,8 +9,8 @@
 [![Google Gemini AI](https://img.shields.io/badge/Google_Gemini-4285F4?style=flat-square&logo=google&logoColor=white)](https://ai.google.dev/)
 [![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white)](https://leafletjs.com/)
 
----
 
+---
 ## 📌 Project Overview
 
 **CivNexa AI** is a production-grade, full-stack civic technology web application that connects citizens with municipal municipal authorities. It bridges the gap between public grievance submission and municipal remediation through automated AI triage, multi-language speech interaction, strict Service Level Agreement (SLA) tracking, and two-way verification workflows.
@@ -193,34 +193,6 @@ Use these pre-configured credentials to test different system roles:
 - `npm run lint` — Runs TypeScript type-checking (`tsc --noEmit`) to verify zero type errors.
 - `npm run clean` — Deletes previous build artifacts (`dist/`).
 
----
-
-## 📦 What to Push to GitHub vs What to Ignore
-
-When pushing to your GitHub repository:
-
-### ✅ Files to INCLUDE in your Git Commit:
-- All source code in `src/` and `server/`
-- `data/civnexa_data.json` (essential for out-of-the-box local database records)
-- `public/` assets
-- `package.json`
-- `tsconfig.json`
-- `vite.config.ts`
-- `index.html`
-- `server.ts`
-- `metadata.json`
-- `.env.example`
-- `.gitignore`
-- `README.md`
-
-### ❌ Files to EXCLUDE from your Git Commit (Covered by `.gitignore`):
-- `node_modules/` (Never push dependencies; install them via `npm install`)
-- `dist/` or `build/` (Compiled production binaries)
-- `.env` or `.env.local` (Contains private API keys)
-- `*.log` (Debug log outputs)
-- `.DS_Store` / `Thumbs.db` (OS system cache files)
-
----
 
 ## 📄 License
 This project is open-source and available under the **MIT License**.
