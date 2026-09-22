@@ -1,0 +1,647 @@
+{
+  "profiles": [
+    {
+      "id": "usr_citizen_1",
+      "full_name": "Ramesh Kumar",
+      "email": "citizen@civicfix.org",
+      "password_hash": "f8854d4e2a0c2a88c6d605e822b35745a1c902831a2c0899adae0d111e4a883c",
+      "phone_number": "+91 98765 43210",
+      "role": "citizen",
+      "created_at": "2026-03-01T08:00:00Z"
+    },
+    {
+      "id": "usr_citizen_2",
+      "full_name": "Ramesh Kumar",
+      "email": "citizen@example.com",
+      "password_hash": "ae832bccb5b2ac17b97ab94243bd18222c5ebcafa5b646ea3d85e806137fd0bd",
+      "phone_number": "+91 98765 43210",
+      "role": "citizen",
+      "created_at": "2026-03-01T08:00:00Z"
+    },
+    {
+      "id": "usr_authority_1",
+      "full_name": "Priya Sharma",
+      "email": "ward.officer@civicfix.org",
+      "password_hash": "a221a8ab4ea060b6256249c4ca9d5615f10bbb81a3f073ae5fc9cade0c9859bd",
+      "phone_number": "+91 94480 12345",
+      "role": "authority",
+      "department": "Public Works & Urban Roads (PWD)",
+      "designation": "Senior Ward Officer",
+      "created_at": "2026-01-15T09:00:00Z"
+    },
+    {
+      "id": "usr_authority_2",
+      "full_name": "Arun Patil",
+      "email": "swm.inspector@civicfix.org",
+      "password_hash": "a221a8ab4ea060b6256249c4ca9d5615f10bbb81a3f073ae5fc9cade0c9859bd",
+      "phone_number": "+91 94480 67890",
+      "role": "authority",
+      "department": "Solid Waste Management & Sanitation",
+      "designation": "Chief Sanitation Inspector",
+      "created_at": "2026-01-16T10:00:00Z"
+    },
+    {
+      "id": "usr_authority_3",
+      "full_name": "Priya Sharma",
+      "email": "authority@civicfix.org",
+      "password_hash": "760ce2c1dd59e5e83e37b37efde5001b30176eaa2099ceec858294d6be8a3e69",
+      "phone_number": "+91 94480 12345",
+      "role": "authority",
+      "department": "Public Works & Urban Roads (PWD)",
+      "designation": "Senior Ward Officer",
+      "created_at": "2026-01-15T09:00:00Z"
+    }
+  ],
+  "departments": [
+    {
+      "id": "dept_pwd",
+      "name": "Public Works & Urban Roads (PWD)",
+      "code": "PWD",
+      "contact_email": "roads.pwd@civicfix.org",
+      "active": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "dept_swm",
+      "name": "Solid Waste Management & Sanitation",
+      "code": "SWM",
+      "contact_email": "sanitation.swm@civicfix.org",
+      "active": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "dept_water",
+      "name": "Urban Water Supply & Sewerage Board",
+      "code": "BWSSB",
+      "contact_email": "waterboard@civicfix.org",
+      "active": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "dept_elec",
+      "name": "Street Lighting & Electrical Division",
+      "code": "ELEC",
+      "contact_email": "lighting@civicfix.org",
+      "active": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "dept_drain",
+      "name": "Storm Water Drains & Flood Management",
+      "code": "SWD",
+      "contact_email": "drains@civicfix.org",
+      "active": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "dept_traffic",
+      "name": "Traffic Engineering & Road Safety",
+      "code": "TRAFFIC",
+      "contact_email": "trafficsignals@civicfix.org",
+      "active": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  ],
+  "zones": [
+    {
+      "id": "zone_east",
+      "name": "East Zone",
+      "code": "EZ",
+      "description": "Covers Indiranagar, Whitefield, and surrounding commercial corridors"
+    },
+    {
+      "id": "zone_south",
+      "name": "South Zone",
+      "code": "SZ",
+      "description": "Covers Koramangala, Jayanagar, and HSR Layout areas"
+    },
+    {
+      "id": "zone_west",
+      "name": "West Zone",
+      "code": "WZ",
+      "description": "Covers Malleshwaram, Rajajinagar, and industrial belts"
+    },
+    {
+      "id": "zone_north",
+      "name": "North Zone",
+      "code": "NZ",
+      "description": "Covers Hebbal, Yelahanka, and northern transit highways"
+    },
+    {
+      "id": "zone_central",
+      "name": "Central Zone",
+      "code": "CZ",
+      "description": "Central Business District and historic civic quarters"
+    }
+  ],
+  "wards": [
+    {
+      "id": "ward_101",
+      "ward_number": 101,
+      "ward_name": "Indiranagar",
+      "zone_id": "zone_east",
+      "zone_name": "East Zone",
+      "office_address": "100ft Road Municipal Complex",
+      "contact_phone": "+91 80 2520 1001"
+    },
+    {
+      "id": "ward_102",
+      "ward_number": 102,
+      "ward_name": "Koramangala",
+      "zone_id": "zone_south",
+      "zone_name": "South Zone",
+      "office_address": "80ft Road Ward Sub-Office",
+      "contact_phone": "+91 80 2553 1002"
+    },
+    {
+      "id": "ward_103",
+      "ward_number": 103,
+      "ward_name": "Malleshwaram",
+      "zone_id": "zone_west",
+      "zone_name": "West Zone",
+      "office_address": "Margosa Road Civic Centre",
+      "contact_phone": "+91 80 2334 1003"
+    },
+    {
+      "id": "ward_104",
+      "ward_number": 104,
+      "ward_name": "Jayanagar",
+      "zone_id": "zone_south",
+      "zone_name": "South Zone",
+      "office_address": "4th Block Community Complex",
+      "contact_phone": "+91 80 2665 1004"
+    },
+    {
+      "id": "ward_105",
+      "ward_number": 105,
+      "ward_name": "HSR Layout",
+      "zone_id": "zone_south",
+      "zone_name": "South Zone",
+      "office_address": "Sector 2 Municipal Sub-Station",
+      "contact_phone": "+91 80 2572 1005"
+    },
+    {
+      "id": "ward_106",
+      "ward_number": 106,
+      "ward_name": "Central Business District",
+      "zone_id": "zone_central",
+      "zone_name": "Central Zone",
+      "office_address": "MG Road Town Hall Annex",
+      "contact_phone": "+91 80 2221 1006"
+    }
+  ],
+  "sla_rules": [
+    {
+      "id": "sla_crit",
+      "priority": "Critical",
+      "max_hours": 4,
+      "escalation_hours": 4,
+      "active": true
+    },
+    {
+      "id": "sla_high",
+      "priority": "High",
+      "max_hours": 24,
+      "escalation_hours": 24,
+      "active": true
+    },
+    {
+      "id": "sla_med",
+      "priority": "Medium",
+      "max_hours": 72,
+      "escalation_hours": 72,
+      "active": true
+    },
+    {
+      "id": "sla_low",
+      "priority": "Low",
+      "max_hours": 168,
+      "escalation_hours": 168,
+      "active": true
+    }
+  ],
+  "complaints": [
+    {
+      "id": "CF-100001",
+      "user_id": "usr_citizen_1",
+      "user_name": "Ramesh Kumar",
+      "user_email": "citizen@example.com",
+      "user_phone": "+91 98765 43210",
+      "category": "Pothole",
+      "priority": "High",
+      "description": "Severe deep crater-like pothole located near 12th Main junction on 100 Feet Road. Two two-wheelers skidded during rain yesterday evening.",
+      "ai_summary": "Severe road surface pothole (~1.2m diameter) obstructing active vehicular traffic lane and presenting two-wheeler collision risk.",
+      "ai_reason": "High traffic corridor combined with wet road conditions creates severe hazard for commuter safety.",
+      "ai_detected_features": [
+        "Asphalt disintegration",
+        "Exposed ballast rock",
+        "Approx 1.2m diameter",
+        "Primary arterial road"
+      ],
+      "latitude": 12.9784,
+      "longitude": 77.6408,
+      "location_text": "Indiranagar 100ft Road near 12th Main, Bengaluru",
+      "ward_id": "ward_101",
+      "ward_name": "Indiranagar",
+      "zone_id": "zone_east",
+      "zone_name": "East Zone",
+      "status": "Submitted",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%23374151%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M0%2C280%20Q300%2C260%20600%2C280%20L600%2C400%20L0%2C400%20Z%22%20fill%3D%22%231F2937%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22300%22%20cy%3D%22240%22%20rx%3D%22140%22%20ry%3D%2260%22%20fill%3D%22%23111827%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22290%22%20cy%3D%22245%22%20rx%3D%22110%22%20ry%3D%2245%22%20fill%3D%22%23030712%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M180%2C240%20Q250%2C220%20320%2C230%20Q400%2C225%20420%2C245%22%20stroke%3D%22%234B5563%22%20stroke-width%3D%224%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22200%22%20x2%3D%22600%22%20y2%3D%22200%22%20stroke%3D%22%23FBBF24%22%20stroke-width%3D%226%22%20stroke-dasharray%3D%2225%2C25%22%2F%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Pothole%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "sla_hours": 24,
+      "due_at": "2026-09-20T10:30:00Z",
+      "escalation_level": 0,
+      "created_at": "2026-09-18T10:30:00Z",
+      "updated_at": "2026-09-18T10:30:00Z"
+    },
+    {
+      "id": "CF-100002",
+      "user_id": "usr_citizen_1",
+      "user_name": "Ramesh Kumar",
+      "user_email": "citizen@example.com",
+      "user_phone": "+91 98765 43210",
+      "category": "Garbage",
+      "priority": "Medium",
+      "description": "Commercial waste and vegetable refuse dumped outside designated bin near water tank for over 4 days. Strong foul odor.",
+      "ai_summary": "Uncollected municipal solid waste overflow around collection bin causing pedestrian obstruction and sanitation concern.",
+      "ai_reason": "Medium priority public health hazard due to decomposition and stray animal scavenging.",
+      "ai_detected_features": [
+        "Overflowing solid waste",
+        "Organic refuse",
+        "Public sidewalk encroachment",
+        "Fly breeding risk"
+      ],
+      "latitude": 12.9352,
+      "longitude": 77.6245,
+      "location_text": "Koramangala 4th Block, 80ft Road, Bengaluru",
+      "ward_id": "ward_102",
+      "ward_name": "Koramangala",
+      "zone_id": "zone_south",
+      "zone_name": "South Zone",
+      "status": "Assigned",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%234B5563%22%2F%3E%0A%20%20%3Crect%20x%3D%220%22%20y%3D%22260%22%20width%3D%22600%22%20height%3D%22140%22%20fill%3D%22%23374151%22%2F%3E%0A%20%20%3Crect%20x%3D%2240%22%20y%3D%22180%22%20width%3D%22220%22%20height%3D%22110%22%20rx%3D%228%22%20fill%3D%22%2315803D%22%20opacity%3D%220.9%22%2F%3E%0A%20%20%3Ctext%20x%3D%2260%22%20y%3D%22240%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22bold%22%3EMUNICIPAL%20BIN%3C%2Ftext%3E%0A%20%20%3Cpath%20d%3D%22M220%2C300%20C240%2C240%20320%2C230%20360%2C260%20C380%2C240%20450%2C250%20470%2C290%20C490%2C320%20380%2C340%20240%2C330%20Z%22%20fill%3D%22%2378716C%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22280%22%20cy%3D%22280%22%20r%3D%2225%22%20fill%3D%22%23A8A29E%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22290%22%20r%3D%2230%22%20fill%3D%22%23D97706%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22410%22%20cy%3D%22285%22%20r%3D%2228%22%20fill%3D%22%2357534E%22%2F%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Waste%20Accumulation%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "sla_hours": 72,
+      "due_at": "2026-09-21T11:00:00Z",
+      "escalation_level": 0,
+      "created_at": "2026-09-17T09:15:00Z",
+      "updated_at": "2026-09-17T11:00:00Z",
+      "assigned_to_department": "Solid Waste Management & Sanitation",
+      "assigned_to_officer": "Arun Patil"
+    },
+    {
+      "id": "CF-100003",
+      "user_id": "usr_citizen_1",
+      "user_name": "Ramesh Kumar",
+      "user_email": "citizen@example.com",
+      "user_phone": "+91 98765 43210",
+      "category": "Streetlight",
+      "priority": "Low",
+      "description": "Two consecutive street poles have been flickering and completely dark between 8pm and 5am on 8th Cross.",
+      "ai_summary": "Defective LED illumination on street lighting poles causing nighttime visibility deficit.",
+      "ai_reason": "Residential street with low evening pedestrian density; standard non-emergency electrical maintenance.",
+      "ai_detected_features": [
+        "Electrical lighting pole",
+        "LED driver failure pattern",
+        "Dark corridor"
+      ],
+      "latitude": 13.0031,
+      "longitude": 77.5703,
+      "location_text": "Malleshwaram 8th Cross, Bengaluru",
+      "ward_id": "ward_103",
+      "ward_name": "Malleshwaram",
+      "zone_id": "zone_west",
+      "zone_name": "West Zone",
+      "status": "In Progress",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%230F172A%22%2F%3E%0A%20%20%3Cline%20x1%3D%22200%22%20y1%3D%22400%22%20x2%3D%22200%22%20y2%3D%22100%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M200%2C100%20Q200%2C50%20260%2C50%20L320%2C50%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%2212%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22310%2C50%20350%2C50%20340%2C75%20320%2C75%22%20fill%3D%22%2394A3B8%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22330%22%20cy%3D%2278%22%20r%3D%228%22%20fill%3D%22%2364748B%22%2F%3E%0A%20%20%3Cline%20x1%3D%22315%22%20y1%3D%2265%22%20x2%3D%22345%22%20y2%3D%2290%22%20stroke%3D%22%23EF4444%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%3Cline%20x1%3D%22345%22%20y1%3D%2265%22%20x2%3D%22315%22%20y2%3D%2290%22%20stroke%3D%22%23EF4444%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%3Ctext%20x%3D%22360%22%20y%3D%2282%22%20fill%3D%22%23EF4444%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3ENON-FUNCTIONAL%3C%2Ftext%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Streetlight%20Defect%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "sla_hours": 168,
+      "due_at": "2026-09-23T14:20:00Z",
+      "escalation_level": 0,
+      "created_at": "2026-09-15T19:40:00Z",
+      "updated_at": "2026-09-16T14:20:00Z",
+      "assigned_to_department": "Street Lighting & Electrical Division",
+      "assigned_to_officer": "Sunil Gowda (Junior Engineer)"
+    },
+    {
+      "id": "CF-100004",
+      "user_id": "usr_citizen_1",
+      "user_name": "Ramesh Kumar",
+      "user_email": "citizen@example.com",
+      "user_phone": "+91 98765 43210",
+      "category": "Water Leakage",
+      "priority": "Critical",
+      "description": "Major drinking water supply distribution line cracked. Clean water gushing at high pressure into main street, eroding road foundation.",
+      "ai_summary": "High-pressure potable water main breach creating continuous localized flooding and sub-base road erosion.",
+      "ai_reason": "Critical loss of precious drinking water resources and imminent threat of road collapse under vehicular load.",
+      "ai_detected_features": [
+        "Pressurized water jet",
+        "Sub-base soil saturation",
+        "Foundation erosion risk"
+      ],
+      "latitude": 12.9299,
+      "longitude": 77.5828,
+      "location_text": "Jayanagar 4th Block, 11th Main Road, Bengaluru",
+      "ward_id": "ward_104",
+      "ward_name": "Jayanagar",
+      "zone_id": "zone_south",
+      "zone_name": "South Zone",
+      "status": "Resolved",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%23334155%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M0%2C260%20Q300%2C240%20600%2C260%20L600%2C400%20L0%2C400%20Z%22%20fill%3D%22%231E293B%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22300%22%20cy%3D%22300%22%20rx%3D%22200%22%20ry%3D%2270%22%20fill%3D%22%230284C7%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22300%22%20cy%3D%22300%22%20rx%3D%22140%22%20ry%3D%2245%22%20fill%3D%22%2338BDF8%22%20opacity%3D%220.8%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22300%22%20cy%3D%22295%22%20rx%3D%2250%22%20ry%3D%2215%22%20fill%3D%22%23E0F2FE%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M290%2C290%20C290%2C230%20310%2C230%20310%2C290%22%20stroke%3D%22%23BAE6FD%22%20stroke-width%3D%226%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Water%20Main%20Leak%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "resolution_image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%231E293B%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M0%2C280%20L600%2C280%20L600%2C400%20L0%2C400%20Z%22%20fill%3D%22%230F172A%22%2F%3E%0A%20%20%3Crect%20x%3D%22180%22%20y%3D%22220%22%20width%3D%22240%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%23334155%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22280%22%20x2%3D%22600%22%20y2%3D%22280%22%20stroke%3D%22%2310B981%22%20stroke-width%3D%226%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22300%22%20cy%3D%22180%22%20r%3D%2245%22%20fill%3D%22%2310B981%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M285%2C180%20L295%2C190%20L320%2C165%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22240%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23065F46%22%20opacity%3D%220.9%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23ECFDF5%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Verification%3A%20Fixed%20%26%20Restored%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "resolution_notes": "Pipeline flange replacement and hydrostatic pressure testing completed. Trench backfilled and surfaced.",
+      "resolved_at": "2026-09-13T16:45:00Z",
+      "sla_hours": 4,
+      "due_at": "2026-09-12T12:00:00Z",
+      "escalation_level": 0,
+      "created_at": "2026-09-12T07:10:00Z",
+      "updated_at": "2026-09-13T16:45:00Z",
+      "assigned_to_department": "Urban Water Supply & Sewerage Board",
+      "assigned_to_officer": "M. S. Murthy"
+    },
+    {
+      "id": "CF-100005",
+      "user_id": "usr_citizen_1",
+      "user_name": "Ramesh Kumar",
+      "user_email": "citizen@example.com",
+      "user_phone": "+91 98765 43210",
+      "category": "Drainage",
+      "priority": "High",
+      "description": "Storm water drain silt chamber blocked by plastic debris. Rainwater overflowing onto pedestrian walkway and school gate entrance.",
+      "ai_summary": "Silt and debris block in roadside storm water drain causing wastewater backflow onto public school entrance.",
+      "ai_reason": "High priority due to pedestrian walkway blockage directly impacting pedestrian and student access.",
+      "ai_detected_features": [
+        "Silt blockage",
+        "Stagnant storm runoff",
+        "Walkway subversion"
+      ],
+      "latitude": 12.9116,
+      "longitude": 77.6389,
+      "location_text": "HSR Layout Sector 2, 27th Main, Bengaluru",
+      "ward_id": "ward_105",
+      "ward_name": "HSR Layout",
+      "zone_id": "zone_south",
+      "zone_name": "South Zone",
+      "status": "Submitted",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%234B5563%22%2F%3E%0A%20%20%3Crect%20x%3D%220%22%20y%3D%22260%22%20width%3D%22600%22%20height%3D%22140%22%20fill%3D%22%23374151%22%2F%3E%0A%20%20%3Crect%20x%3D%2240%22%20y%3D%22180%22%20width%3D%22220%22%20height%3D%22110%22%20rx%3D%228%22%20fill%3D%22%2315803D%22%20opacity%3D%220.9%22%2F%3E%0A%20%20%3Ctext%20x%3D%2260%22%20y%3D%22240%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22bold%22%3EMUNICIPAL%20BIN%3C%2Ftext%3E%0A%20%20%3Cpath%20d%3D%22M220%2C300%20C240%2C240%20320%2C230%20360%2C260%20C380%2C240%20450%2C250%20470%2C290%20C490%2C320%20380%2C340%20240%2C330%20Z%22%20fill%3D%22%2378716C%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22280%22%20cy%3D%22280%22%20r%3D%2225%22%20fill%3D%22%23A8A29E%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22290%22%20r%3D%2230%22%20fill%3D%22%23D97706%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22410%22%20cy%3D%22285%22%20r%3D%2228%22%20fill%3D%22%2357534E%22%2F%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Waste%20Accumulation%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "sla_hours": 24,
+      "due_at": "2026-09-20T11:20:00Z",
+      "escalation_level": 0,
+      "created_at": "2026-09-19T11:20:00Z",
+      "updated_at": "2026-09-19T11:20:00Z"
+    },
+    {
+      "id": "CF-100006",
+      "user_id": "usr_citizen_1",
+      "user_name": "Ramesh Kumar",
+      "user_email": "citizen@example.com",
+      "user_phone": "+91 98765 43210",
+      "category": "Traffic Signal",
+      "priority": "High",
+      "description": "Pedestrian countdown timer and traffic signal stuck on flashing amber for 2 days. Pedestrians unable to cross safely during rush hour.",
+      "ai_summary": "Signal controller electronic failure at high-density pedestrian junction.",
+      "ai_reason": "High safety hazard for crossing pedestrians on major commercial thoroughfare.",
+      "ai_detected_features": [
+        "Traffic signal unit",
+        "Amber fault indicator",
+        "Crosswalk intersection"
+      ],
+      "latitude": 12.9756,
+      "longitude": 77.6094,
+      "location_text": "MG Road - Brigade Road Junction, Bengaluru",
+      "ward_id": "ward_106",
+      "ward_name": "Central Business District",
+      "zone_id": "zone_central",
+      "zone_name": "Central Zone",
+      "status": "Assigned",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%230F172A%22%2F%3E%0A%20%20%3Cline%20x1%3D%22200%22%20y1%3D%22400%22%20x2%3D%22200%22%20y2%3D%22100%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M200%2C100%20Q200%2C50%20260%2C50%20L320%2C50%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%2212%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22310%2C50%20350%2C50%20340%2C75%20320%2C75%22%20fill%3D%22%2394A3B8%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22330%22%20cy%3D%2278%22%20r%3D%228%22%20fill%3D%22%2364748B%22%2F%3E%0A%20%20%3Cline%20x1%3D%22315%22%20y1%3D%2265%22%20x2%3D%22345%22%20y2%3D%2290%22%20stroke%3D%22%23EF4444%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%3Cline%20x1%3D%22345%22%20y1%3D%2265%22%20x2%3D%22315%22%20y2%3D%2290%22%20stroke%3D%22%23EF4444%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%3Ctext%20x%3D%22360%22%20y%3D%2282%22%20fill%3D%22%23EF4444%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3ENON-FUNCTIONAL%3C%2Ftext%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Streetlight%20Defect%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "sla_hours": 24,
+      "due_at": "2026-09-19T16:00:00Z",
+      "escalation_level": 1,
+      "created_at": "2026-09-18T14:00:00Z",
+      "updated_at": "2026-09-18T16:30:00Z",
+      "assigned_to_department": "Traffic Engineering & Road Safety",
+      "assigned_to_officer": "Inspector V. Rao"
+    }
+  ],
+  "complaint_images": [
+    {
+      "id": "img_CF-100001",
+      "complaint_id": "CF-100001",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%23374151%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M0%2C280%20Q300%2C260%20600%2C280%20L600%2C400%20L0%2C400%20Z%22%20fill%3D%22%231F2937%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22300%22%20cy%3D%22240%22%20rx%3D%22140%22%20ry%3D%2260%22%20fill%3D%22%23111827%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22290%22%20cy%3D%22245%22%20rx%3D%22110%22%20ry%3D%2245%22%20fill%3D%22%23030712%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M180%2C240%20Q250%2C220%20320%2C230%20Q400%2C225%20420%2C245%22%20stroke%3D%22%234B5563%22%20stroke-width%3D%224%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22200%22%20x2%3D%22600%22%20y2%3D%22200%22%20stroke%3D%22%23FBBF24%22%20stroke-width%3D%226%22%20stroke-dasharray%3D%2225%2C25%22%2F%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Pothole%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "image_type": "evidence",
+      "uploaded_at": "2026-09-18T10:30:00Z"
+    },
+    {
+      "id": "img_CF-100002",
+      "complaint_id": "CF-100002",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%234B5563%22%2F%3E%0A%20%20%3Crect%20x%3D%220%22%20y%3D%22260%22%20width%3D%22600%22%20height%3D%22140%22%20fill%3D%22%23374151%22%2F%3E%0A%20%20%3Crect%20x%3D%2240%22%20y%3D%22180%22%20width%3D%22220%22%20height%3D%22110%22%20rx%3D%228%22%20fill%3D%22%2315803D%22%20opacity%3D%220.9%22%2F%3E%0A%20%20%3Ctext%20x%3D%2260%22%20y%3D%22240%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22bold%22%3EMUNICIPAL%20BIN%3C%2Ftext%3E%0A%20%20%3Cpath%20d%3D%22M220%2C300%20C240%2C240%20320%2C230%20360%2C260%20C380%2C240%20450%2C250%20470%2C290%20C490%2C320%20380%2C340%20240%2C330%20Z%22%20fill%3D%22%2378716C%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22280%22%20cy%3D%22280%22%20r%3D%2225%22%20fill%3D%22%23A8A29E%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22290%22%20r%3D%2230%22%20fill%3D%22%23D97706%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22410%22%20cy%3D%22285%22%20r%3D%2228%22%20fill%3D%22%2357534E%22%2F%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Waste%20Accumulation%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "image_type": "evidence",
+      "uploaded_at": "2026-09-17T09:15:00Z"
+    },
+    {
+      "id": "img_CF-100003",
+      "complaint_id": "CF-100003",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%230F172A%22%2F%3E%0A%20%20%3Cline%20x1%3D%22200%22%20y1%3D%22400%22%20x2%3D%22200%22%20y2%3D%22100%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M200%2C100%20Q200%2C50%20260%2C50%20L320%2C50%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%2212%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22310%2C50%20350%2C50%20340%2C75%20320%2C75%22%20fill%3D%22%2394A3B8%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22330%22%20cy%3D%2278%22%20r%3D%228%22%20fill%3D%22%2364748B%22%2F%3E%0A%20%20%3Cline%20x1%3D%22315%22%20y1%3D%2265%22%20x2%3D%22345%22%20y2%3D%2290%22%20stroke%3D%22%23EF4444%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%3Cline%20x1%3D%22345%22%20y1%3D%2265%22%20x2%3D%22315%22%20y2%3D%2290%22%20stroke%3D%22%23EF4444%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%3Ctext%20x%3D%22360%22%20y%3D%2282%22%20fill%3D%22%23EF4444%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3ENON-FUNCTIONAL%3C%2Ftext%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Streetlight%20Defect%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "image_type": "evidence",
+      "uploaded_at": "2026-09-15T19:40:00Z"
+    },
+    {
+      "id": "img_CF-100004",
+      "complaint_id": "CF-100004",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%23334155%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M0%2C260%20Q300%2C240%20600%2C260%20L600%2C400%20L0%2C400%20Z%22%20fill%3D%22%231E293B%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22300%22%20cy%3D%22300%22%20rx%3D%22200%22%20ry%3D%2270%22%20fill%3D%22%230284C7%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22300%22%20cy%3D%22300%22%20rx%3D%22140%22%20ry%3D%2245%22%20fill%3D%22%2338BDF8%22%20opacity%3D%220.8%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22300%22%20cy%3D%22295%22%20rx%3D%2250%22%20ry%3D%2215%22%20fill%3D%22%23E0F2FE%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M290%2C290%20C290%2C230%20310%2C230%20310%2C290%22%20stroke%3D%22%23BAE6FD%22%20stroke-width%3D%226%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Water%20Main%20Leak%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "image_type": "evidence",
+      "uploaded_at": "2026-09-12T07:10:00Z"
+    },
+    {
+      "id": "img_CF-100005",
+      "complaint_id": "CF-100005",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%234B5563%22%2F%3E%0A%20%20%3Crect%20x%3D%220%22%20y%3D%22260%22%20width%3D%22600%22%20height%3D%22140%22%20fill%3D%22%23374151%22%2F%3E%0A%20%20%3Crect%20x%3D%2240%22%20y%3D%22180%22%20width%3D%22220%22%20height%3D%22110%22%20rx%3D%228%22%20fill%3D%22%2315803D%22%20opacity%3D%220.9%22%2F%3E%0A%20%20%3Ctext%20x%3D%2260%22%20y%3D%22240%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20font-weight%3D%22bold%22%3EMUNICIPAL%20BIN%3C%2Ftext%3E%0A%20%20%3Cpath%20d%3D%22M220%2C300%20C240%2C240%20320%2C230%20360%2C260%20C380%2C240%20450%2C250%20470%2C290%20C490%2C320%20380%2C340%20240%2C330%20Z%22%20fill%3D%22%2378716C%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22280%22%20cy%3D%22280%22%20r%3D%2225%22%20fill%3D%22%23A8A29E%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22290%22%20r%3D%2230%22%20fill%3D%22%23D97706%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22410%22%20cy%3D%22285%22%20r%3D%2228%22%20fill%3D%22%2357534E%22%2F%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Waste%20Accumulation%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "image_type": "evidence",
+      "uploaded_at": "2026-09-19T11:20:00Z"
+    },
+    {
+      "id": "img_CF-100006",
+      "complaint_id": "CF-100006",
+      "image_url": "data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%230F172A%22%2F%3E%0A%20%20%3Cline%20x1%3D%22200%22%20y1%3D%22400%22%20x2%3D%22200%22%20y2%3D%22100%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M200%2C100%20Q200%2C50%20260%2C50%20L320%2C50%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%2212%22%20fill%3D%22none%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22310%2C50%20350%2C50%20340%2C75%20320%2C75%22%20fill%3D%22%2394A3B8%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22330%22%20cy%3D%2278%22%20r%3D%228%22%20fill%3D%22%2364748B%22%2F%3E%0A%20%20%3Cline%20x1%3D%22315%22%20y1%3D%2265%22%20x2%3D%22345%22%20y2%3D%2290%22%20stroke%3D%22%23EF4444%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%3Cline%20x1%3D%22345%22%20y1%3D%2265%22%20x2%3D%22315%22%20y2%3D%2290%22%20stroke%3D%22%23EF4444%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%3Ctext%20x%3D%22360%22%20y%3D%2282%22%20fill%3D%22%23EF4444%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3ENON-FUNCTIONAL%3C%2Ftext%3E%0A%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22220%22%20height%3D%2234%22%20rx%3D%224%22%20fill%3D%22%23000000%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2230%22%20y%3D%2242%22%20fill%3D%22%23FFFFFF%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3EField%20Evidence%3A%20Streetlight%20Defect%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+      "image_type": "evidence",
+      "uploaded_at": "2026-09-18T14:00:00Z"
+    }
+  ],
+  "complaint_status_history": [
+    {
+      "id": "csh_1001",
+      "complaint_id": "CF-100001",
+      "from_status": "Submitted",
+      "to_status": "Submitted",
+      "changed_by_user_id": "usr_citizen_1",
+      "changed_by_name": "Ramesh Kumar (Citizen)",
+      "notes": "Citizen registered grievance report with location and photograph.",
+      "created_at": "2026-09-18T10:30:00Z"
+    },
+    {
+      "id": "csh_1002",
+      "complaint_id": "CF-100002",
+      "from_status": "Submitted",
+      "to_status": "Assigned",
+      "changed_by_user_id": "usr_authority_1",
+      "changed_by_name": "Priya Sharma (Ward Officer)",
+      "notes": "Report verified via AI classification. Assigned to Solid Waste Management Division for immediate clearing.",
+      "created_at": "2026-09-17T11:00:00Z"
+    },
+    {
+      "id": "csh_1003",
+      "complaint_id": "CF-100003",
+      "from_status": "Assigned",
+      "to_status": "In Progress",
+      "changed_by_user_id": "usr_authority_1",
+      "changed_by_name": "Priya Sharma (Ward Officer)",
+      "notes": "Lineman dispatched with replacement LED driver and aerial ladder vehicle.",
+      "created_at": "2026-09-16T14:20:00Z"
+    },
+    {
+      "id": "csh_1004",
+      "complaint_id": "CF-100004",
+      "from_status": "Submitted",
+      "to_status": "Assigned",
+      "changed_by_user_id": "usr_authority_1",
+      "changed_by_name": "Priya Sharma (Ward Officer)",
+      "notes": "Emergency water valve isolation dispatched.",
+      "created_at": "2026-09-12T08:00:00Z"
+    },
+    {
+      "id": "csh_1005",
+      "complaint_id": "CF-100004",
+      "from_status": "Assigned",
+      "to_status": "In Progress",
+      "changed_by_user_id": "usr_authority_1",
+      "changed_by_name": "Priya Sharma (Ward Officer)",
+      "notes": "Trench excavated, replacement high-density polyethylene collar installed.",
+      "created_at": "2026-09-12T12:30:00Z"
+    },
+    {
+      "id": "csh_1006",
+      "complaint_id": "CF-100004",
+      "from_status": "In Progress",
+      "to_status": "Resolved",
+      "changed_by_user_id": "usr_authority_1",
+      "changed_by_name": "Priya Sharma (Ward Officer)",
+      "notes": "Pipeline welded, pressure tested successfully at 4.5 bar, and trench backfilled with bitumen cold mix.",
+      "created_at": "2026-09-13T16:45:00Z"
+    },
+    {
+      "id": "csh_1007",
+      "complaint_id": "CF-100005",
+      "from_status": "Submitted",
+      "to_status": "Submitted",
+      "changed_by_user_id": "usr_citizen_1",
+      "changed_by_name": "Ramesh Kumar (Citizen)",
+      "notes": "Citizen registered drainage blockage issue near school gate.",
+      "created_at": "2026-09-19T11:20:00Z"
+    },
+    {
+      "id": "csh_1008",
+      "complaint_id": "CF-100006",
+      "from_status": "Submitted",
+      "to_status": "Assigned",
+      "changed_by_user_id": "usr_authority_1",
+      "changed_by_name": "Priya Sharma (Ward Officer)",
+      "notes": "Ticket assigned to Traffic Engineering & Signals Cell.",
+      "created_at": "2026-09-18T16:30:00Z"
+    }
+  ],
+  "complaint_assignments": [
+    {
+      "id": "asg_101",
+      "complaint_id": "CF-100002",
+      "assigned_by_user_id": "usr_authority_1",
+      "assigned_by_name": "Priya Sharma",
+      "assigned_to_department": "Solid Waste Management & Sanitation",
+      "assigned_to_officer": "Arun Patil",
+      "internal_note": "Deploy auto-tipper vehicle and 3 sanitation workers for priority clearance.",
+      "created_at": "2026-09-17T11:00:00Z"
+    },
+    {
+      "id": "asg_102",
+      "complaint_id": "CF-100003",
+      "assigned_by_user_id": "usr_authority_1",
+      "assigned_by_name": "Priya Sharma",
+      "assigned_to_department": "Street Lighting & Electrical Division",
+      "assigned_to_officer": "Sunil Gowda (Junior Engineer)",
+      "internal_note": "Inspect junction box wiring on pole 8C-12.",
+      "created_at": "2026-09-16T10:00:00Z"
+    },
+    {
+      "id": "asg_103",
+      "complaint_id": "CF-100004",
+      "assigned_by_user_id": "usr_authority_1",
+      "assigned_by_name": "Priya Sharma",
+      "assigned_to_department": "Urban Water Supply & Sewerage Board",
+      "assigned_to_officer": "M. S. Murthy",
+      "internal_note": "Emergency pipeline crew dispatched under ticket BWSSB-EM-882.",
+      "created_at": "2026-09-12T08:00:00Z"
+    },
+    {
+      "id": "asg_104",
+      "complaint_id": "CF-100006",
+      "assigned_by_user_id": "usr_authority_1",
+      "assigned_by_name": "Priya Sharma",
+      "assigned_to_department": "Traffic Engineering & Road Safety",
+      "assigned_to_officer": "Inspector V. Rao",
+      "internal_note": "Check synchronization card and optic LED heads.",
+      "created_at": "2026-09-18T16:30:00Z"
+    }
+  ],
+  "complaint_comments": [],
+  "citizen_feedback": [],
+  "notifications": [
+    {
+      "id": "notif_1",
+      "user_id": "usr_citizen_1",
+      "complaint_id": "CF-100004",
+      "title": "Complaint Resolved — Action Required",
+      "message": "Grievance CF-100004 (Water Leakage at Jayanagar 4th Block) has been marked resolved. Please inspect and confirm resolution.",
+      "read": false,
+      "type": "resolution",
+      "created_at": "2026-09-13T16:45:00Z"
+    },
+    {
+      "id": "notif_2",
+      "user_id": "usr_citizen_1",
+      "complaint_id": "CF-100003",
+      "title": "Status Updated: In Progress",
+      "message": "Grievance CF-100003 (Streetlight at Malleshwaram 8th Cross) is currently being worked on by Electrical Division.",
+      "read": false,
+      "type": "status_update",
+      "created_at": "2026-09-16T14:20:00Z"
+    },
+    {
+      "id": "notif_3",
+      "user_id": "usr_citizen_1",
+      "complaint_id": "CF-100002",
+      "title": "Complaint Assigned",
+      "message": "Grievance CF-100002 (Garbage at Koramangala 4th Block) has been assigned to Solid Waste Management.",
+      "read": true,
+      "type": "assignment",
+      "created_at": "2026-09-17T11:00:00Z"
+    },
+    {
+      "id": "notif_4",
+      "user_id": "usr_citizen_1",
+      "complaint_id": "CF-100001",
+      "title": "Complaint Registered",
+      "message": "Your report CF-100001 has been registered. AI triage recommended priority: High.",
+      "read": true,
+      "type": "status_update",
+      "created_at": "2026-09-18T10:30:00Z"
+    },
+    {
+      "id": "notif_5",
+      "user_id": "usr_authority_1",
+      "complaint_id": "CF-100006",
+      "title": "SLA Escalation Alert",
+      "message": "Ticket CF-100006 (Traffic Signal on MG Road) has exceeded target resolution window and has been escalated.",
+      "read": false,
+      "type": "sla_warning",
+      "created_at": "2026-09-19T16:00:00Z"
+    }
+  ],
+  "audit_logs": []
+}

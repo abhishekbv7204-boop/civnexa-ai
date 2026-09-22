@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User account profile authenticated via Firebase Auth",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Unique Firebase Auth UID" },
+        "email": { "type": "string", "format": "email", "description": "User email address" },
+        "displayName": { "type": "string", "maxLength": 100, "description": "User full name" },
+        "photoURL": { "type": "string", "description": "User avatar image URL" },
+        "role": { "type": "string", "enum": ["citizen", "authority", "admin"], "description": "Access control role" },
+        "phoneNumber": { "type": "string", "maxLength": 20, "description": "Contact phone number" },
+        "createdAt": { "type": "string", "description": "Account creation timestamp" },
+        "updatedAt": { "type": "string", "description": "Account update timestamp" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "Complaint": {
+      "title": "Complaint",
+      "description": "Civic grievance filed by a citizen or synchronized with municipal records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique complaint ID" },
+        "title": { "type": "string", "maxLength": 200, "description": "Short summary of the issue" },
+        "description": { "type": "string", "maxLength": 2000, "description": "Detailed description" },
+        "category": { "type": "string", "description": "Civic grievance category" },
+        "priority": { "type": "string", "enum": ["Low", "Medium", "High", "Critical"], "description": "SLA urgency level" },
+        "status": { "type": "string", "enum": ["submitted", "acknowledged", "in_progress", "resolved", "reopened", "rejected"], "description": "Current lifecycle status" },
+        "address": { "type": "string", "maxLength": 300, "description": "Physical landmark or street address" },
+        "latitude": { "type": "number", "description": "GPS Latitude coordinate" },
+        "longitude": { "type": "number", "description": "GPS Longitude coordinate" },
+        "citizenId": { "type": "string", "description": "UID of filing citizen" },
+        "citizenName": { "type": "string", "description": "Name of citizen" },
+        "citizenEmail": { "type": "string", "description": "Email of citizen" },
+        "wardId": { "type": "string", "description": "Municipal ward identifier" },
+        "departmentId": { "type": "string", "description": "Assigned municipal department" },
+        "upvotes": { "type": "number", "description": "Community upvote count" },
+        "createdAt": { "type": "string", "description": "Filing timestamp" },
+        "updatedAt": { "type": "string", "description": "Last update timestamp" }
+      },
+      "required": ["id", "title", "description", "category", "priority", "status", "citizenId"]
+    },
+    "UserSavedComplaint": {
+      "title": "UserSavedComplaint",
+      "description": "User bookmarked or upvoted civic issue",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Saved record ID" },
+        "complaintId": { "type": "string", "description": "Referenced complaint ID" },
+        "title": { "type": "string", "description": "Cached title" },
+        "category": { "type": "string", "description": "Cached category" },
+        "savedAt": { "type": "string", "description": "Timestamp when bookmarked" }
+      },
+      "required": ["id", "complaintId", "savedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile records containing account and role information"
+    },
+    "/users/{userId}/savedComplaints/{savedId}": {
+      "schema": "UserSavedComplaint",
+      "description": "Private bookmarked issues tracked by the citizen"
+    },
+    "/complaints/{complaintId}": {
+      "schema": "Complaint",
+      "description": "City-wide civic complaints accessible for public transparency and municipal action"
+    }
+  }
+}

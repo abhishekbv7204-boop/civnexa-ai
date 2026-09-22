@@ -1,0 +1,6 @@
+{
+  "name": "CivicFix AI",
+  "description": "An AI-powered civic issue reporting and complaint tracking platform connecting citizens and municipal authorities.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

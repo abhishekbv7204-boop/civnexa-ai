@@ -1,0 +1,118 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default-deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'abhishekbv7204@gmail.com' ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    function isAuthority() {
+      return isSignedIn() && (
+        isAdmin() ||
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role in ['authority', 'admin'])
+      );
+    }
+
+    function isValidUserProfile(data) {
+      return data.uid is string &&
+             data.email is string &&
+             data.email.size() <= 200 &&
+             data.role in ['citizen', 'authority', 'admin'] &&
+             (!('displayName' in data) || (data.displayName is string && data.displayName.size() <= 100)) &&
+             (!('phoneNumber' in data) || (data.phoneNumber is string && data.phoneNumber.size() <= 20));
+    }
+
+    function isValidComplaint(data) {
+      return data.id is string &&
+             data.title is string && data.title.size() <= 200 &&
+             data.description is string && data.description.size() <= 2000 &&
+             data.category is string &&
+             data.priority in ['Low', 'Medium', 'High', 'Critical'] &&
+             data.status in ['submitted', 'acknowledged', 'in_progress', 'resolved', 'reopened', 'rejected'] &&
+             data.citizenId is string;
+    }
+
+    function isValidSavedComplaint(data) {
+      return data.id is string &&
+             data.complaintId is string &&
+             data.savedAt is string;
+    }
+
+    // Users collection (PII Protected)
+    match /users/{userId} {
+      allow get: if isOwner(userId) || isAuthority();
+      allow list: if isAuthority();
+      allow create: if isOwner(userId) &&
+                       incoming().uid == request.auth.uid &&
+                       isValidUserProfile(incoming());
+      allow update: if isOwner(userId) &&
+                       incoming().uid == existing().uid &&
+                       isValidUserProfile(incoming()) &&
+                       incoming().diff(existing()).affectedKeys().hasOnly(['displayName', 'photoURL', 'phoneNumber', 'role', 'updatedAt']);
+      allow delete: if isAdmin();
+
+      // Subcollection: Saved Complaints
+      match /savedComplaints/{savedId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidSavedComplaint(incoming());
+        allow update: if isOwner(userId) && isValidSavedComplaint(incoming());
+        allow delete: if isOwner(userId);
+      }
+    }
+
+    // Complaints collection (Civic transparency feed)
+    match /complaints/{complaintId} {
+      allow read: if true;
+      allow create: if isSignedIn() &&
+                       isValidComplaint(incoming()) &&
+                       incoming().citizenId == request.auth.uid;
+      allow update: if isSignedIn() && (
+                       // Author can update status (e.g. reopen) or description
+                       (existing().citizenId == request.auth.uid &&
+                        incoming().diff(existing()).affectedKeys().hasOnly(['status', 'feedback_rating', 'feedback_comment', 'updatedAt', 'upvotes'])) ||
+                       // Authorities can update status, assignment, proof
+                       (isAuthority() &&
+                        incoming().diff(existing()).affectedKeys().hasOnly(['status', 'assigned_department', 'priority', 'status_history', 'resolution_proof', 'updatedAt'])) ||
+                       // Any user can upvote
+                       incoming().diff(existing()).affectedKeys().hasOnly(['upvotes', 'updatedAt'])
+                    );
+      allow delete: if isAdmin();
+    }
+
+    // Connection test document
+    match /test/connection {
+      allow read: if true;
+    }
+  }
+}
